@@ -132,7 +132,7 @@ class QueryAgent:
         )
         self.client = OpenAIClient(
             base_url="https://openrouter.ai/api/v1/",
-            api_key=os.getenv('API_KEY', 'sk-or-v1-0e9acbfc-74565bc9b7073deeb3a7d091648366beac2e0a3080ece9ec1b2fe958')
+            api_key=os.getenv('API_KEY')
         )
 
     def query_database(self, query: str, file_id: str) -> str:
