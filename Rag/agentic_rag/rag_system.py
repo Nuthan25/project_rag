@@ -72,8 +72,6 @@ class ConversationalRAGSystem:
     def process_input(self, user_input: str) -> str:
         """Process user input and return response"""
         intent, original_input = self._detect_intent(user_input)
-        print(intent)
-        print(original_input)
 
         if intent == "help":
             return self._help_response()
@@ -95,8 +93,6 @@ class ConversationalRAGSystem:
 
         elif intent == "query_specific":
             number, query = self._extract_file_number(user_input)
-            print("number", number)
-            print("query", query)
             if number and query:
                 file_id = self._get_file_id_by_number(number)
                 if file_id:
