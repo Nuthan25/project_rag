@@ -19,7 +19,7 @@ Answer the question based on the above context: {question}
 # Initialize the OpenAI-compatible client for OpenRouter
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv('API_KEY', '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'),  # Make sure API_KEY is set in .env or environment
+    api_key=os.getenv('API_KEY'),  # Make sure API_KEY is set in .env or environment
 )
 
 def main():
